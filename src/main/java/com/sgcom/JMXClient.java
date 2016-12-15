@@ -56,8 +56,8 @@ public class JMXClient {
             stdMBeanName = new ObjectName("java.lang:type=Memory");
 
             MemoryUsage musage_ = MemoryUsage.from((CompositeData) mbs_.getAttribute(stdMBeanName, "HeapMemoryUsage"));
-            System.out.println("————————————————-");
-            System.out.println("MemoryMBean 정보 출력:");
+            System.out.println("------------------------------------------------------------------------------------");
+            System.out.println("MemoryMBean 정보 출력 : ");
             System.out.println("> HeapMemoryUsage-init = " + (float) musage_.getInit() / 1024.0F + " kbytes");
             System.out.println("> HeapMemoryUsage-max = " + musage_.getMax());
             System.out.println("> HeapMemoryUsage-used = " + (float) musage_.getUsed() / 1024.0F + " kbytes");
@@ -79,8 +79,8 @@ public class JMXClient {
                 Object obj_ = itr_.next();
                 ObjectName objName_ = (ObjectName) obj_;
 
-                System.out.println("———————————————-");
-                System.out.println(mbs_.getAttribute(objName_, "Name") + " Pool 정보 출력:");
+                System.out.println("-----------------------------------------------------------------------------------");
+                System.out.println(mbs_.getAttribute(objName_, "Name") + "Pool 정보 출력 :");
                 System.out.println("Memory Type = " + mbs_.getAttribute(objName_, "Type"));
                 System.out.println("Memory Peak Usage:");
 
