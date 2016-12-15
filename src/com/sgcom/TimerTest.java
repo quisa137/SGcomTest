@@ -41,9 +41,3 @@ public class TimerTest {
         System.out.println("System is normal : " + df.format(new Date(System.currentTimeMillis())));
     }
 }
-
-
-/* Location:              C:\Users\SGcom\Documents\EclipsePrj\SGcomTest\bin\!\com\sgcom\TimerTest.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       0.7.1
- */
